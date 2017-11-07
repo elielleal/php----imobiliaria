@@ -46,53 +46,53 @@ else{
 	
 	try{
 		
-$query_cadastraCliente = $conecta -> prepare($sql_cadastraCliente);
-$query_cadastraCliente -> bindvalue(':criadoEM', $criadoEM, PDO::PARAM_STR);
-$query_cadastraCliente -> bindvalue(':modificadoEM', $modificadoEM, PDO::PARAM_STR);
-$query_cadastraCliente-> bindvalue(':clienteStatus', $clienteStatus, PDO::PARAM_STR);
-$query_cadastraCliente -> bindvalue(':usuarioNivel', $clienteNivel, PDO::PARAM_STR);
-$query_cadastraCliente -> bindvalue(':nome', $nome, PDO::PARAM_STR);
-$query_cadastraCliente -> bindvalue(':email', $email, PDO::PARAM_STR);
-$query_cadastraCliente -> bindvalue(':senha', $senha, PDO::PARAM_STR);
-$query_cadastraCliente -> bindvalue(':telefone', $telefone, PDO::PARAM_STR);
-$query_cadastraCliente -> execute();
+    $query_cadastraCliente = $conecta -> prepare($sql_cadastraCliente);
+    $query_cadastraCliente -> bindvalue(':criadoEM', $criadoEM, PDO::PARAM_STR);
+    $query_cadastraCliente -> bindvalue(':modificadoEM', $modificadoEM, PDO::PARAM_STR);
+    $query_cadastraCliente-> bindvalue(':clienteStatus', $clienteStatus, PDO::PARAM_STR);
+    $query_cadastraCliente -> bindvalue(':usuarioNivel', $clienteNivel, PDO::PARAM_STR);
+    $query_cadastraCliente -> bindvalue(':nome', $nome, PDO::PARAM_STR);
+    $query_cadastraCliente -> bindvalue(':email', $email, PDO::PARAM_STR);
+    $query_cadastraCliente -> bindvalue(':senha', $senha, PDO::PARAM_STR);
+    $query_cadastraCliente -> bindvalue(':telefone', $telefone, PDO::PARAM_STR);
+    $query_cadastraCliente -> execute();
 
-$mail_data = date('d/m/Y H:i:s');
-$meuEmail = 'eliel_leal_13@hotmail.com.br';
-$assunto = 'Novo Cliente cadastrado '.$clienteNome;
-$headers = "From: $meuEmail\n";
-$headers .= "content-type: text/html; 
-charset=\"utf-8\"\n\n";
-$mensagemSistema = "Novo Cliente Cadastrado:<br>
-<strong>Cliente Nome:</strong>$clienteNome<br>
-<strong>Cliente E-mail:</strong>$clienteEmail<br>
-Mensagem Enviada em: $mail_data";
-mail($meuEmail, $assunto, $mensagemSistema, $headers);
-$clienteAssunto = 'Cadastro efetuado com sucesso Eliel Imóveis';
-$mensagemCliente = " 
-<strong> Email de segurança, guarde este e-mail para consulta!</strong><br>
-Seus dados são: <br> <br> 
-Login:$clienteEmail<br>
-Senha:$clienteSenha_mail<br><br>
-Seu Cadastro foi criado em $criadoEM! <br> <br>
-Esta é uma mensagem automática de nosso sistema, você não precisa responder! <br><br>
-Mensagem enviada em: $mail_data";
+    $mail_data = date('d/m/Y H:i:s');
+    $meuEmail = 'eliel_leal_13@hotmail.com.br';
+    $assunto = 'Novo Cliente cadastrado '.$clienteNome;
+    $headers = "From: $meuEmail\n";
+    $headers .= "content-type: text/html; 
+    charset=\"utf-8\"\n\n";
+    $mensagemSistema = "Novo Cliente Cadastrado:<br>
+    <strong>Cliente Nome:</strong>$clienteNome<br>
+    <strong>Cliente E-mail:</strong>$clienteEmail<br>
+    Mensagem Enviada em: $mail_data";
+    mail($meuEmail, $assunto, $mensagemSistema, $headers);
+    $clienteAssunto = 'Cadastro efetuado com sucesso Eliel Imóveis';
+    $mensagemCliente = " 
+    <strong> Email de segurança, guarde este e-mail para consulta!</strong><br>
+    Seus dados são: <br> <br> 
+    Login:$clienteEmail<br>
+    Senha:$clienteSenha_mail<br><br>
+    Seu Cadastro foi criado em $criadoEM! <br> <br>
+    Esta é uma mensagem automática de nosso sistema, você não precisa responder! <br><br>
+    Mensagem enviada em: $mail_data";
 
-mail($clienteEmail, $clienteAssunto, $mensagemCliente, $headers);
+    mail($clienteEmail, $clienteAssunto, $mensagemCliente, $headers);
 
 
 
-echo ' <h2> Cadastro com Sucesso</h2>
-    
-    <p>Seu cadastro foi realizado com sucesso! Para começar anunciar <a href="admin/index.php">CLIQUE AQUI</a><br /> ou efetue login na central do anunciante</p>
-    
-    <p>Por segurança enviamos uma cópia de seu cadastro por e-mail<strong>'.$clienteEmail.'</strong></p>
-    ';	
-		
-	}
-	catch(PDOexception $error_cadastro){
-echo '<h2> Erro ao Cadastrar, por favor tente novamente ou nos envie um e-mail informando </h2> ';
-}
+    echo ' <h2> Cadastro com Sucesso</h2>
+        
+        <p>Seu cadastro foi realizado com sucesso! Para começar anunciar <a href="admin/index.php">CLIQUE AQUI</a><br /> ou efetue login na central do anunciante</p>
+        
+        <p>Por segurança enviamos uma cópia de seu cadastro por e-mail<strong>'.$clienteEmail.'</strong></p>
+        ';	
+            
+        }
+        catch(PDOexception $error_cadastro){
+        echo '<h2> Erro ao Cadastrar, por favor tente novamente ou nos envie um e-mail informando </h2> ';
+        }
 }
   ?>
   

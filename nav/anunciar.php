@@ -46,7 +46,7 @@
         </label>
         
            
-          <input type="submit" name="cadastrar_cliente" value="Cadastrar" class="btn" />
+          <input type="submit" name="cadastra_cliente" value="Cadastrar" class="btn" />
         
         
        </fieldset>

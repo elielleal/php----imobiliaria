@@ -20,7 +20,7 @@
         <?php include_once("../modelo/menu.php")?>
         
         <div id="content_conteudo">
-            
+            <?php include_once("sistema/carregando.php"); ?>
         </div>
     </div>
     

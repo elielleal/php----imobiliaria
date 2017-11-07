@@ -1,4 +1,4 @@
-<?php include_once("sistema/restrito_all.php")?>
+<?php include_once("sistema/restrito_admin.php")?>
 <?php include_once("sistema/validar_user.php")?>
 <?php include_once("header.php")?>
 

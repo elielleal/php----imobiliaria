@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	
-	/*VALIDA CADASTRO DE CLIENTES NO SITE*/ 
+	<!-- VALIDA CADASTRO DE CLIENTES NO SITE -->
 	$("#cadastra_cliente").validate({
 						   
 				rules:{

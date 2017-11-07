@@ -1,6 +1,6 @@
 <?php
 
-include"../Connections/config.php";
+include "../Connections/config.php";
 
 $usuarioSistema = $_SESSION['MM_Username'];
 $sqlSistema_usuarioSistema = 'SELECT * FROM eliel_clientes WHERE email = :usuarioSistema';

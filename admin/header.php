@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Painel Administrativo</title>
 <link rel="stylesheet" type="text/css" href="painel_style.css">
-
+<?php include "sistema/scripts.php" ?>
 </head>
 
 <body>

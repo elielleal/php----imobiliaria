@@ -20,7 +20,201 @@
         <?php include_once("menu.php")?>
         
         <div id="content_conteudo">
-            ADMIN
+            <?php
+if($clienteNivel == 'cliente'){
+    echo '<meta http-equiv="refresh" content="0, URL=deslogar.php" />';
+}elseif($clienteNivel == 'admin'){
+	
+	
+	?>
+    
+    <?php if(isset($_POST['executar']) && $_POST['executar'] == 'Autenticar Anúncio'){
+$autId       = $_POST['autId'];
+$autoFim     = date('Y-m-d H:i:s',strtotime('+1 month'));
+$autStatus   = 'completo';
+
+$aut_imovel = 'UPDATE eliel_imoveis SET imovelStatus = :imovelStatus, imovelTermino = :imovelTermino
+               WHERE imovelId = :imovelId';
+			   
+try{
+	$queryAut = $conecta->prepare($aut_imovel);
+	$queryAut->bindValue(':imovelStatus',$autStatus,PDO::PARAM_STR);
+	$queryAut->bindValue(':imovelTermino',$autoFim,PDO::PARAM_STR);
+	$queryAut->bindValue(':imovelId',$autId,PDO::PARAM_STR);
+	$queryAut->execute();
+	
+	echo '<div class="ok">Autenticado com sucesso!</div>';
+	
+	}catch(PDOexception $error_aut){
+	  echo 'Erro ao autenticar '.$error_aut->getMessage();	
+	}
+}
+
+?>    
+    
+    
+     <h1> Anúncios com pagamentos aguardando </h1>
+    
+     <table width="100%" border="0" cellspacing="3" cellpadding="0">
+  <tr style="background:#666; color:#FFF">
+    <td align="center">Cliente ID:</td>
+    <td align="center">Anuncio Id</td>
+    <td align="center">Autenticação</td>
+    <td align="center">Executar</td>
+    
+  </tr>
+  
+ <?php
+ 
+ $imovelStatus = 'aguardando';
+ $data = date('Y-m-d H:m:s');
+ $sql_pegaAtivos = 'SELECT * FROM eliel_imoveis WHERE  imovelStatus = :imovelStatus AND imovelTermino >= :data
+					ORDER BY imovelTermino ASC';
+					
+ try{
+	 $query_pegaAtivos = $conecta->prepare($sql_pegaAtivos);
+	 $query_pegaAtivos->bindValue(':imovelStatus',$imovelStatus,PDO::PARAM_STR);
+	 $query_pegaAtivos->bindValue(':data',$data,PDO::PARAM_STR);
+	 $query_pegaAtivos->execute();
+	 
+	 $resultado_pegaAtivos = $query_pegaAtivos->fetchAll(PDO::FETCH_ASSOC);
+	 
+	 $count_pegaAtivos = $query_pegaAtivos->rowCount(PDO::FETCH_ASSOC);
+	 
+	 }catch(PDOexception $error_pegaAtivos){
+        echo 'Erro ao pegar ativos';
+	 }
+	 
+	 foreach($resultado_pegaAtivos as $resAtivos){
+		 $anuncioId = $resAtivos['imovelId'];
+		 $clienteId = $resAtivos['clienteId'];
+		 $anuncioTitulo = $resAtivos['imovelTitulo'];
+		 $anuncioInicio = $resAtivos['imovelCadastro'];
+		 $anuncioFinal = $resAtivos['imovelTermino'];
+		 $anuncioVisitas = $resAtivos['imovelVisitas'];
+		  $anuncioConfirma = $resAtivos['imovelConfirma'];
+		 $i = 0;
+		 $i++;
+		if($i % 2 == 0){
+			$cor = 'style="background:#E6FFF2"';
+		}else{
+			$cor = 'style="background:#f4f4f4;"';
+		}
+		
+		$dataHoje = mktime(0,0,0,date('m'),date('d'),date('Y'));
+		$dataFim = mktime(0,0,0,date('m',strtotime($anuncioFinal)),date('d',strtotime($anuncioFinal)),                   date('Y',strtotime($anuncioFinal)));
+		$executaData = $dataFim - $dataHoje;
+		$faltamDias = floor($executaData/(60*60*24));
+		 
+		 
+	 
+ 
+ ?> 
+  
+  <tr <?php echo $cor;?>>
+    <td align="center"><?php echo $anuncioId ;?></td>
+    <td align="center"><?php echo $anuncioTitulo;?></td>
+    <td align="center"><?php echo $anuncioConfirma;?></td>
+    
+   <td align="center"> <form name="autenticar" action="" enctype="multipart/form-data" method="post">
+      <input type="hidden" name="autId" value="<?php echo $anuncioId;?>" />
+      <input type="submit" name="executar" id="executar" value="Autenticar Anúncio" />
+    
+    </form></td>
+    
+  </tr>
+  
+  <?php
+	 }
+  ?>
+  
+</table>
+
+<?php if($count_pegaAtivos == '0'){
+	echo '<h2>Sem anúncios no momento</h2>';
+}else{}?>
+	
+    <br><br>
+    <h1> Anúncios aguardando Pagamentos </h1>
+    
+    <table width="100%" border="0" cellspacing="3" cellpadding="0">
+  <tr style="background:#666; color:#FFF">
+    <td align="center">Cliente ID:</td>
+    <td align="center">Anúncio ID:</td>
+    <td align="center">Titulo:</td>
+    <td align="center">Cadastro Em:</td>
+    
+    
+  </tr>
+  
+ <?php
+ 
+ $imovelStatus = 'processando';
+ $data = date('Y-m-d H:m:s');
+ $sql_pegaAtivos = 'SELECT * FROM eliel_imoveis WHERE  imovelStatus = :imovelStatus AND imovelTermino >= :data
+					ORDER BY imovelTermino ASC';
+					
+ try{
+	 $query_pegaAtivos = $conecta->prepare($sql_pegaAtivos);
+
+	 $query_pegaAtivos->bindValue(':imovelStatus',$imovelStatus,PDO::PARAM_STR);
+	 $query_pegaAtivos->bindValue(':data',$data,PDO::PARAM_STR);
+	 $query_pegaAtivos->execute();
+	 
+	 $resultado_pegaAtivos = $query_pegaAtivos->fetchAll(PDO::FETCH_ASSOC);
+	 
+	  $count_pegaAtivos = $query_pegaAtivos->rowCount(PDO::FETCH_ASSOC);
+	 
+	 }catch(PDOexception $error_pegaAtivos){
+        echo 'Erro ao pegar ativos';
+	 }
+	 
+	 foreach($resultado_pegaAtivos as $resAtivos){
+		 $clienteId = $resAtivos['clienteId'];
+		 $anuncioId = $resAtivos['imovelId'];
+		 $anuncioTitulo = $resAtivos['imovelTitulo'];
+		 $anuncioInicio = $resAtivos['imovelCadastro'];
+		 $anuncioFinal = $resAtivos['imovelTermino'];
+		 $anuncioVisitas = $resAtivos['imovelVisitas'];
+		 $i = 0;
+		 $i++;
+		if($i % 2 == 0){
+			$cor = 'style="background:#E6FFF2"';
+		}else{
+			$cor = 'style="background:#f4f4f4;"';
+		}
+		
+		$dataHoje = mktime(0,0,0,date('m'),date('d'),date('Y'));
+		$dataFim = mktime(0,0,0,date('m',strtotime($anuncioFinal)),date('d',strtotime($anuncioFinal)),                   date('Y',strtotime($anuncioFinal)));
+		$executaData = $dataFim - $dataHoje;
+		$faltamDias = floor($executaData/(60*60*24));
+		 
+		 
+	 
+ 
+ ?> 
+  
+  <tr <?php echo $cor;?>>
+ 	 <td align="center"><?php echo $clienteId ;?></td>
+    <td align="center"><?php echo $anuncioId ;?></td>
+    <td align="center"><?php echo $anuncioTitulo;?></td>
+    <td align="center"><?php echo date('d/m/y',strtotime($anuncioInicio));?></td>
+       
+  </tr>
+  
+  <?php
+	 }
+  ?>
+  
+</table>
+
+<?php if($count_pegaAtivos == '0'){
+	echo '<h2>Sem anúncios no momento</h2>';
+}else{}?>
+    
+<?php	
+}
+?>
         </div>
     </div>
     

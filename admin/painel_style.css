@@ -35,7 +35,7 @@ body{background:url(images/painel_body.jpg) repeat-x #666;}
 /*CONTENT CONTEUDO*/
 #content_conteudo{width:800px; background:#393939; border:1px solid #CCC; float:right; padding:5px;}
 #content_conteudo h1{font:18px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#FF4040;}
-#content_conteudo h2{font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666;}
+#content_conteudo h2{font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#FF4040;}
 #content_conteudo h3{font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#999;}
 #content_conteudo .ok{padding:5px; background:#B3FFD9; font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;
                       color:333; border:1px solid #333;}
@@ -45,7 +45,7 @@ body{background:url(images/painel_body.jpg) repeat-x #666;}
                       color:#333; border:1px solid #333; text-align:center;}
 #content_conteudo .error{font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; font-weight:bold; color:#900;}
 
-#content_conteudo p{font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#333; margin:10px 0;}
+#content_conteudo p{font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#FFF; margin:10px 0;}
 
 
 #content_conteudo form{background:#f4f4f4; padding:5px;}

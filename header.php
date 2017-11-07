@@ -75,13 +75,14 @@ if (isset($_POST['usuario'])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
+<html lang="pt-br"><head>
         <title>Eliel Imóveis</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-       <?php require_once('Connections/config.php'); ?>
-       <?php include "js/scripts.php"; ?>
+             <?php include "Connections/config.php";?>
+   <?php include "js/scripts.php"; ?>
+        <?php include "funcoes.php"; ?>
         <meta charset="UTF-8">
+
     </head>
     <body>
        <div id="box">
@@ -121,23 +122,23 @@ if (isset($_POST['usuario'])) {
                <h1>Busque seu Imóvel</h1>
                <h2>Busca Interativa - Selecione abaixo!</h2>
 
-                <form class="filtrar_avancado" method="post" action="" >
+                <form class="filtrar_avancado" method="post" action="index.php?pg=filtro" >
                     <select name="tipo">
                         <option value="">Comprar ou Alugar?</option>
-                        <option value="">Comprar</option>
-                        <option value="">Alugar</option>
+                        <option value="Comprar">Comprar</option>
+                        <option value="Alugar">Alugar</option>
                     </select>
                     <select name="categoria">
                         <option value="" disabled="disabled" selected>Categoria do Imóvel</option>
                     </select>
-                    <select name="sub_categoria">
+                    <select name="sub-cat">
                         <option value="" disabled="disabled" selected>Qual imóvel desejado?</option>
                     </select>
-                    <select name="comodos">
+                    <select name="bairro">
                         <option value="" disabled="disabled" selected>Qual o bairro desejado?</option>
                     </select>
 
-                    <span>Filtramos: 100 Imóveis</span>
+                    <span>Selecionde seu Imóvel</span>
                     <input type="submit" name="Listar" value="Buscar Imóveis" class="btn"/>
                 </form>
 

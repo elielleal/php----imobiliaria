@@ -1,4 +1,4 @@
-<?php include_once("sistema/restrito_all.php")?>
+<?php include_once("sistema/restrito_admin.php")?>
 <?php include_once("sistema/validar_user.php")?>
 <?php include_once("header.php")?>
 
@@ -83,7 +83,7 @@ try{
     <td align="center"><?php echo date('d/m/Y H:i',strtotime($emailData));?>h</td>
     <td align="center"><?php echo $emailNome;?></td>
     <td align="center"><?php echo $emailEmail;?></td>
-    <td align="center"><a href="painel.php?exe=admin-inbox/resposta&emailId=<?php echo $emailId;?>">Visualizar / Responder</a></td>
+    <td  align="center"><a href="painel.php?exe=admin-inbox/ver&emailId=<?php echo $emailId;?>">Visualizar </a></td>
   </tr>
   
 <?php

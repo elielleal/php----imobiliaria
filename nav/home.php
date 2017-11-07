@@ -1,8 +1,8 @@
 <div id="imoveis_home">
             <h1>Imóveis</h1>
-            <form name="busca_comum" action="index.php?pg=search" method="post">
+            <form name="busca_comum" action="index.php?pg=search" method="GET">
                 <label><span>Busca Simples</span>
-                    <input type="text" name="pesquisa">
+                    <input type="text" name="p">
                     <input type="submit" name="buscar" value="" class="btn">
                 </label>
             </form>
