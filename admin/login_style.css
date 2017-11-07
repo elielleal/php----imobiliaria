@@ -1,0 +1,80 @@
+/*Pagina*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #2A2A2A;
+}
+
+/*Login*/
+#login{
+    width: 512px;
+    height: 415px;
+    margin: 80px auto;
+    background: url(images/log.jpg) no-repeat;
+}
+body{background:#2A2A2A;}
+#login{width:512px; height:451px; margin:80px auto; background:url(images/log.jpg) no-repeat;}
+#login img{margin:55px 15px 0 67px; margin-left: -29px;}
+#login form{margin:20px 0 0 65px;}
+#login label{display:block; margin:0 0 10px 0;}
+#login span{font:20px Arial, Helvetica, sans-serif; color: #EB4B87;}
+#login input{padding:8px; width:357px; font:18px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#FFF;
+            border:1px none; background-color: #3A4149;}
+#login input[type=text]:focus{
+    background: #292c34;
+    border: 1px;
+    box-shadow: none;
+}
+#login input[type=password]:focus{
+    background: #292c34;
+    border: 1px;
+    box-shadow: none;
+}
+#login .btn{border:1px solid #EB4B87; background:#EB4B87; color:#FFF; width:100px; display:block; float:right;
+           margin:5px 60px 0 0; cursor:pointer;}
+#login .btn:hover{background: #00BFFF;}
+#login p a{float:left; font:20px Arial, Helvetica, sans-serif; color:#EB4B87; text-decoration:none; margin: 16px; margin-top:12px;}
+#login p a:hover{color:#363b41;}
+
+#login .envie{width:357px; background:#005789; display:block; font:15px "Trebuchet MS", Arial, Helvetica, sans-serif;
+             color:#fff; padding:5px; margin-bottom:5px; font-weight:bold; border:1px solid #930;}
+#login .alertas{display:block; width:357px; background:#00BFFF; float:left; margin-top:60px; padding:5px;
+               font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#FFF; font-weight:bold;
+			   border:1px solid #333; text-align:center;}
+#login .alertas2{display:block; width:357px; background:#00BFFF; float:left; margin-top:60px; padding:5px;
+               font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#FFF; font-weight:bold;
+			   border:1px solid #333; text-align:center;}
+			   
+#login .restrito{width:357px; display:block; font:20px "Trebuchet MS", Arial, Helvetica, sans-serif;
+             color:#FFF; padding:5px; margin:30px 0 0 100px;}
+#login .link{margin:15px 170px;}			 
+#login .link a{padding:5px; text-decoration:none; color:#FFF; background:#EB4B87; border:1px solid #333;
+                   width:100px;}
+#login .link a:hover{background:#00BFFF; color:#FFF;}
+
+#login .usu{
+    float: left;
+    margin: 5px;
+    margin-left: 45px;
+    margin-top: 130px;
+    
+}
+#login .usua{
+    float: left;
+    margin: 5px;
+    margin-left: -35px;
+    margin-top: 171px;
+    
+}
+#login .usuario{
+    float: left;
+    margin: 5px;
+    margin-left: 45px;
+    margin-top: 175px;
+    
+}
+
+
+

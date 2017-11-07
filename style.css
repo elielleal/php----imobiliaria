@@ -1,0 +1,846 @@
+/* CSS Document */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #1C1C1C;
+}
+/* Conteudo pagina */
+#box{
+    width: 1000px;
+    margin: 0 auto;
+    background: #FFF;
+   
+}
+/* header */
+#header{
+    border-bottom: 5px solid #383939;;
+    height: 365px;
+    background: #FFF;
+}
+#header_topo{
+    height: 110px;
+    border-bottom: 5px solid #383939;;
+}
+#header_topo img{
+    float: left;
+    margin: 10px;
+}
+#header_topo ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    float: right;
+    
+}
+#header_topo ul li{
+    display: inline;
+    font: 25px "Trebuchet MS", Arial, Helvetida, Sans-serif;
+    font-weight: bold;
+    float: left;
+}
+#header_topo ul li a{
+    padding: 5px 15px;
+    float: left;
+    text-decoration: none;
+    margin: 35px 15px;
+    color: 	#D2AA6D;
+}
+#header_topo ul li a:hover{
+    background: #816125;
+    color: #FFF;
+}
+
+
+#header_navegar{
+    width: 1000px; 
+    height: 250px;
+}
+
+/*header anunciantes*/
+#header_navegar_central{
+    width: 235px;
+    float: left;
+    background: #00BFFF;
+}
+#header_navegar_central_anunciante{
+    width: 235px;
+    height: 122px;
+    background: url(images/central_bg.jpg) no-repeat;
+    float: left;
+}
+#header_navegar_central_anunciante label{
+    display: block;
+    margin: 0 0 2px 0;
+}
+#header_navegar_central_anunciante form{
+    margin: 40px 0 0 15px;
+    float: left;
+}
+#header_navegar_central_anunciante span{
+    font: 14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #CD3700;
+    width: 55px;
+    float: left;
+    text-align: right;
+    margin-right: 12px;
+}
+#header_navegar_central_anunciante input{
+    font: 14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #CD3700;
+    width: 130px;
+    height: 16px;
+    border: 1px solid #808080;
+    padding: 2px;
+    background: #FFF;
+}
+#header_navegar_central_anunciante .senha{
+    width: 75px;
+    margin: 3px 0 5px 0;
+}
+#header_navegar_central_anunciante .btn{
+    width: 50px;
+    height: 26px;
+    float: right;
+    background: url(images/login.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+#header_navegar_central_anunciante .btn:hover{
+    background: url(images/login_hover.png) no-repeat;
+}
+#header_navegar_central_anunciante .senha_txt{
+    margin: 3px 2px 0 0;
+}
+#header_navegar_central_anunciante p{
+    text-align: center;
+    font: 13px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #CD3700;
+    margin-top: 5px;
+}
+#header_navegar_central_anunciante p a{
+    color: #CD3700;
+    text-decoration: none;
+    
+}
+#header_navegar_central_anunciante p a:hover{
+    color: #FF4040;
+}
+
+/* header central anuncie*/
+#header_navegar_central_anuncie{
+    width: 235px;
+    height: 128px;
+    background: url(images/anuncie_bg.jpg) no-repeat;
+    float: left;
+}
+.header_navegar_central_anuncie{
+    margin: 40px 0 0 10px;
+    float: left;
+}
+#header_navegar_central_anuncie a{
+    background: url(images/anuncie_btn.png) no-repeat;
+    width: 126px;
+    height: 19px;
+    float: left;
+    text-decoration: none;
+    font: 12px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #CD3700;
+    padding: 7px 10px 5px 10px;
+    margin-left: 60px;
+    display: block;
+}
+#header_navegar_central_anuncie a:hover{
+    color: #FF4040;
+}
+#header_navegar_central_anuncie p{
+    font: 10px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #CD3700;
+    float: left;
+    width: 209px;
+    padding: 8px 8px 0 0;
+    font-weight: bold;
+    text-shadow: 1px 1px #FFF;
+}
+
+/*header filtro*/
+#header_navegar_filtro{
+    width: 412px;
+    height: 250px;
+    background: url(images/busca_avancada_bg.jpg) no-repeat;
+    float: left;
+    
+}
+#header_navegar_filtro h1{
+    margin: 15px 0 0 70px;
+    font: 29px Georgia, "Time New Roman", Times, serif;
+    font-weight: bold;
+    color: #FF4040;
+}
+#header_navegar_filtro h2{
+     margin-right: 30px;
+    font: 16px "Trebuchet MS", Arial, Helvetica, sans serif;
+    color: #FF4040;
+    text-align: right;
+}
+#header_navegar_filtro form{
+    float: left;
+    margin: 20px 0 0 15px;
+}
+#header_navegar_filtro select{
+    border: 1px solid #FF4040;
+    background: #FFF;
+    width: 158px;
+    height: 25px;
+    margin: 0 8px 15px 0;
+    font: 13px "Trebuchet MS", Arial, Helvetica, sans serif;
+    color: #8B2323;
+    font-weight: bold;
+}
+#header_navegar_filtro span{
+    font: 16px "Trebuchet MS", Arial, Helvetica, sans serif;
+    color: #FF4040;
+    font-weight: bold;
+    float: left;
+    margin: 15px 0 0 0;
+}
+#header_navegar_filtro .btn{
+    padding: 5px 10px;
+    cursor: pointer;
+    font: 20px Georgia, "Time New Roman", Times, serif;
+    font-weight: bold;
+    color: #FF4040;
+    font-variant: small-caps;
+    float: right;
+    margin: 5px 13px 0 0;
+}
+
+/*header publicidade*/
+#header_navegar_publicidade{
+    width: 341px;
+    height: 240px;
+    float: left;
+    padding: 5px;
+    
+}
+#header_navegar_publicidade h1{
+    font: 25px Georgia, "Times New Roman", Times, Serif;
+    font-weight: bold;
+    font-variant: small-caps;
+    color: #8B3E2F;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #383939;
+    
+}
+
+
+/* imoveis home */
+#imoveis_home{
+    width: 1000px;
+    height: 600px;
+    background: url(images/lista_home.jpg) no-repeat #FFF;
+    border-bottom: 5px solid #383939;
+    padding: 0 0 32px;
+}
+#imoveis_home h1{
+    float: left;
+    margin: 5px 65px;
+    font: 32px Arial, Helvetica, sans serif;
+    color: #FF4500;
+    font-weight: bold;
+}
+#imoveis_home form{
+    float: right;
+    margin-right: 5px;
+}
+#imoveis_home label{
+    display: block;
+}
+#imoveis_home span{
+    font: 16px Georgia, "Times New Roman", Times, Serif;
+    padding: 25px;
+    color: #FFF;
+    border: 0;
+}
+#imoveis_home input{
+    padding: 3px 5px 4px 5px;
+    width: 396px;
+    height: 27px;
+    font: 16px "Trebuchet MS", Arial, Helvetica, sans serif;
+    color: #000;
+    font-weight: bold;
+    background: url(images/search_bar_home.png) no-repeat;
+    border: 0px;
+    
+}
+#imoveis_home .btn{
+    width: 90px;
+    height: 27px;
+    background: url(images/search_btn_home.png) no-repeat;
+    cursor: pointer;
+}
+#imoveis_home a{
+    text-decoration: none;
+}
+#imoveis_home a:hover{
+    text-decoration: underline;
+}
+#imoveis_home .anuncie{
+    width: 300px;
+    float: left;
+    padding: 2px;
+}
+
+/* lista 1*/
+#imoveis_home .lista_um{
+    list-style: none;
+    float: left;
+    width: 1000px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #363636;
+}
+#imoveis_home .lista_um li{
+    display: inline;
+    float: left;
+    text-align: center;
+    margin: 5px 23px;
+}
+#imoveis_home .lista_um li:hover{
+    background: #363636;
+}
+#imoveis_home .lista_um li h2 a{
+    font: 16px  Arial, Helvetica, sans serif;
+    color: #FF4500;
+    font-weight: bold;
+}
+#imoveis_home .lista_um li h3 a{
+    font: 14px  Arial, Helvetica, sans serif;
+    color: #4A708B;
+    
+}
+#imoveis_home .lista_um li .veja_mais{
+    font: 14px  Arial, Helvetica, sans serif;
+    color: #FF4040;
+    font-weight: bold;
+    width: 98px;
+    height: 15px;
+    float: left;
+    background: url(images/lista_g_btn.png);
+    padding: 8px 5px;
+    margin: 4px 48px;
+}
+#imoveis_home .lista_um li .veja_mais:hover{
+    color: #00BFFF;
+}
+
+/* lista 2 */
+#imoveis_home .lista_dois{
+    list-style: none;
+    float: left;
+    width: 500px;
+    margin-bottom: 5px;
+}
+#imoveis_home .lista_dois li{
+    display: inline;
+    float: left;
+    text-align: center;
+    margin: 5px 23px;
+}
+#imoveis_home .lista_dois li:hover{
+    background: #363636;
+}
+#imoveis_home .lista_dois li h2 a{
+    font: 16px  Arial, Helvetica, sans serif;
+    color: #FF4500;
+    font-weight: bold;
+}
+#imoveis_home .lista_dois li h3 a{
+    font: 14px  Arial, Helvetica, sans serif;
+    color: #4A708B;
+    
+}
+#imoveis_home .lista_dois li .veja_mais{
+    font: 14px  Arial, Helvetica, sans serif;
+    color: #FF4040;
+    font-weight: bold;
+    width: 98px;
+    height: 15px;
+    float: left;
+    background: url(images/lista_g_btn.png);
+    padding: 8px 5px;
+    margin: 4px 48px;
+}
+#imoveis_home .lista_dois li .veja_mais:hover{
+    color: #00BFFF;
+}
+
+/* categorias dos imóveis */
+#imoveis_home_lista{
+    width:1000px;
+     padding:0; float:left; 
+     background:#FFF;
+}
+#imoveis_home_lista a{
+    text-decoration:none;
+}
+#imoveis_home_lista a:hover{
+    text-decoration:underline;
+}
+#imoveis_home_lista ul{
+    list-style:none; 
+    margin:0; 
+    padding:0; 
+    float:left;
+}
+#imoveis_home_lista ul li{
+    display:inline; 
+    float:left; 
+    text-align:center; 
+    margin:5px 6px 5px 29px;
+}
+#imoveis_home_lista ul li:hover{
+    background:#383939;
+}
+#imoveis_home_lista ul li h2 a{
+    font:16px  Arial, Helvetica, sans-serif; 
+    font-weight:bold; 
+    color:#FF4500;
+}
+#imoveis_home_lista ul li h3{
+    font:14px  Arial, Helvetica, sans-serif;  
+    color:#4A708B;
+}
+#imoveis_home_lista ul li .veja_mais{
+    font:14px  Arial, Helvetica, sans-serif; 
+    font-weight:bold; 
+    color: #FF4040; 
+    float:left; 
+    width:77px; 
+    height:17px; 
+    padding:5px; 
+    margin:5px 37px 0 37px; 
+    background:url(images/lista_p_btn.png);
+}
+#imoveis_home_lista .veja_mais:hover{
+    color: #00BFFF
+}
+
+/* footer */
+#clear{
+    clear: both;
+}
+#footer{
+    width: 1000px;
+    height: 150px;
+    margin: 0 auto;
+    background: #FFF;
+}
+#footer_bg{
+    background: url(images/footer.jpg) no-repeat #FFF;
+    width: 997px;
+    height: 140px;
+    float: left;
+    margin: 3px;
+
+}
+#footer_bg .txt{
+    float: left;
+    padding: 10px 0 0 20px;
+    text-align: left;
+    font: 20px  Arial, Helvetica, sans-serif; 
+    font-weight:bold; 
+    color: #FF4040; 
+}
+#footer_bg .img{
+    float: right;
+    padding: 20px 30px 0 0;
+}
+#footer_bg span{
+    display: block;
+    color: #404143;
+}
+
+/*paginas*/
+#pagina{
+    background: #FFF;
+    padding: 10px;
+    margin-bottom: 5px;
+    float: left;
+    width: 980px;
+}
+#pagina h1{
+    font: 18px "Trebuchet MS", Arial, Helvetica, sans serif;
+    color: #FF4040;
+    font-weight: bold;
+    padding: 5px;
+    background: #383939;
+    margin-bottom: 10px;
+    font-variant: small-caps;
+}
+#pagina a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+#pagina a:hover{
+    color: #FF4040;
+    text-decoration: underline;
+}
+
+#pagina form{
+    width: 500px;
+    padding: 10px;
+    background: #393939;
+    float: right;
+}
+#pagina label{
+    display: block;
+    margin-bottom: 5px;
+}
+#pagina span{
+    display: block;
+    font: 16px "Trebuchet MS", Arial, Helvetica, sans serif;
+    color: #D2AA6D;
+    font-weight: bold;
+}
+#pagina input{
+    border: 1px solid #333;
+    font: 16px "Trebuchet MS", Arial, Helvetica, sans serif;
+    color: #FF4040;
+    padding: 3px;
+    width: 489px;
+    font-weight: bold;
+}
+#pagina textarea{
+    border: 1px solid #333;
+    font: 16px "Trebuchet MS", Arial, Helvetica, sans serif;
+    color: #00BFFF;
+    padding: 3px;
+    width: 494px;
+}
+#pagina fieldset{
+    font: 18px Georgia, "Times New Roman", Times, Serif;
+    font-weight: bold;
+    color: #FF4040;
+    padding-bottom: 10px;
+    font-variant: small-caps;
+}
+#pagina .btn{
+    width: 109px;
+    padding: 3px;
+    display: block;
+    margin: 0 auto;
+    color: #FF4040;
+    cursor: pointer;
+}
+#pagina .btn:hover{
+    background: #FF4040;
+    border: 2px solid #00BFFF;
+    color: #00BFFF;
+}
+#pagina .anuncie{
+    float: left;
+    width: 310px;
+    font: 14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #4A708B;
+}
+#pagina .anuncie p{
+    margin: 10px 0;
+}
+#pagina .anuncie h2{
+    font: 16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #333;
+    font-variant: small-caps;
+}
+#pagina .anuncie a{
+    color: #863;
+}
+#pagina .anuncie a:hover{
+    color: #8B2323;
+}
+#pagina .anuncie_ok h2{
+    font: 18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #4A708B;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+#pagina .anuncie_ok p{
+    font: 14px Arial, Helvetica, sans-serif;
+    color: #8B2323;
+    margin: 10px
+}
+#pagina .anuncie_ok a{
+    font-weight: bold;
+    color: #4A708B;
+}
+
+/*Pagina paginador*/
+#pagina .paginador{
+    display: block;
+    margin: 10px 0 5px 0;
+    float: right;
+}
+#pagina .paginador a{
+    padding: 3px 5px;
+    margin: 0 1px;
+    border: 1px solid #8B2323;
+    font-weight: bold;
+}
+#pagina .paginador a:hover{
+    background: #8B2323;
+    color: #FFF;
+    text-decoration: none;
+}
+#pagina .enviado{
+    font: 16px Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 5px;
+    color: #FFF;
+    background: #FF4040;
+    margin: 0 0 10px 0;
+}
+
+#pagina .nom{
+    width: 489px;
+}
+#pagina span{
+    width: 489px;
+}
+#pagina textarea .nom{
+    width: 489px;
+}
+
+
+/*Single navegar*/
+#single{
+    padding: 10px;
+    background: #FFF;
+    margin-bottom: 5px;
+    float: left;
+    width: 980px;
+}
+#single h1{
+    font: 18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #FF4040;
+    font-variant: small-caps;
+    padding: 5px;
+    background: #393939;
+    margin-bottom: 18px
+}
+#single .navegar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+#single .navegar ul li{
+    display: inline;
+    float: left;
+    margin: 5px 5px 15px;
+    font: 14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #CD3700;
+}
+#single .navegar ul li a{
+    color: #CD3700;
+}
+#single .navegar ul li a:hover{
+    color: #FF4500;
+}
+#single .navegar ul li img{
+    float: left;
+    margin-right: 5px;
+
+}
+#single .exibicao{
+    padding: 5px;
+    border: 2px solid #FF4040;
+    background: #393939;
+}
+
+/*single carosel*/
+#single .carosel{
+    display: block;
+    margin: 5px 0 0 1px;
+    padding: 0;
+    list-style: none;
+}
+#single .carosel img{
+    margin: 0;
+    padding: 2px;
+}
+#single .carosel img:hover{
+    background: #393939;
+}
+#single .carosel li{
+    display: inline;
+    float: left;
+    margin: 0 4px 0 0;
+    widows: 65px; 
+    height: 49px;
+    pad: 1px;
+    border: 1px solid #FF4040;
+    overflow: hidden;
+}
+#single .carosel li:hover{
+    border: 1px solid #393939;
+    overflow: hidden;
+}
+#single .carosel .nav{
+    width: auto;
+    height: auto;
+    border: 0;
+    padding: 0;
+}
+#single .carosel .nav:hover{
+    border: none;
+}
+
+/*single left*/
+#single .single_left{
+    width: 530px;
+    float: left;
+    padding: 5px;
+
+}
+#single .icon{
+    float: left;
+    margin-right: 5px; 
+}
+#single .single_left form{
+    float: left;
+    padding: 10px;
+    background: #00BFFF;
+    width: 502px;
+    margin-top: 10px;
+}
+#single .single_left fieldset{
+    border: none;
+}
+#single .single_left .legend{
+    font: 18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #CD3700;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+#single .single_left span{
+    font: 16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #000;
+    font-variant: small-caps;
+    display: block;
+    margin: 4px;
+}
+#single .single_left input{
+    display: block;
+    padding: 5px;
+    width: 488px;
+    border: 1px solid #CD3700;
+    font: 14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #CD3700;
+}
+#single .single_left textarea{
+    display: block;
+    padding: 5px;
+    width: 488px;
+    border: 1px solid #CD3700;
+    font: 14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #CD3700;
+}
+#single .single_left label{
+    display: block;
+    margin: 5px 0;
+}
+#single .single_left .btn{
+    width: 100px;
+    height: 30px;
+    color: #FF4040;
+    font-weight: bold;
+    margin: 0 auto;
+    cursor: pointer;
+}
+#single .single_left .btn:hover{
+    background: #FF4040;
+    border: 2px solid #00BFFF;
+    color: #00BFFF;
+}
+
+
+/*single rigth*/
+#single .single_right{
+    width: 400px;
+    float: right;
+    padding: 5px;   
+}
+#single .single_right h4{
+    font: 18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #CD3700;
+    font-variant: small-caps;
+}
+#single .info{
+    font: 16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #00BFFF;
+    padding: 5px;
+    float: left;
+    width: 390px;
+    background: #393939;
+
+}
+#single .info strong{
+    color: #FF4040;
+}
+#single .descricao{
+    font: 14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #4A708B;
+    margin: 10px 0;
+    float: left;
+    width: 400px;
+}
+#single .itens ul{
+    list-style: square;
+    margin: 0 20px;
+    font: 14px Georgia, "Times New Roman", times, serif;
+    color: #8B2323;
+    float: left;
+    width: 400px;
+}
+#single .itens ul li{
+    margin: 3px 0;
+}
+#single .facilidades{
+    font: 14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #4A708B;
+    float: left;
+    width: 400px;
+}
+#single .facilidades strong{
+    font-variant: small-caps;
+    margin: 10px 0;
+    float: left;
+    width: 400px;
+    font-size: 18px;
+}
+#single .endereco{
+    padding: 10px;
+    background: #333;
+    color: #00BFFF;
+    float: left;
+    width: 380px;
+    margin: 35px 0;
+    font: 16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+
+}
+#single .google{
+    width: 336px;
+    height: 280px;
+    float: left;
+    padding: 0px 1px;
+    margin: 0px 0px;
+}
+
